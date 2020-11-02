@@ -1,12 +1,12 @@
-﻿Name,Family,2018,2019
-Ryan,Reilly,Rachel & Joe,Becca & Jeramy
-Ben & Kami,Reilly,Jeannette & Terry,Rachel & Joe
-Sally,Reilly,Becca & Jeramy,Ron & Suzanne
-Julia,Marquez,Ryan,Jeannette & Terry
-Jason & Maurisa,Marquez,Monique,Melanie & Drew
-Ron & Suzanne,Marquez,Melanie & Drew,Ben & Kami
-Rachel & Joe,Velarde,Sally,Julia
-Melanie & Drew,Velarde,Ron & Suzanne,Monique
-Becca & Jeramy,Velarde,Jason & Maurisa,Sally
-Jeannette & Terry,Velarde,Ben & Kami,Ryan
-Monique,Ecker,Julia,Jason & Maurisa
+﻿Name,Family,2018,2019,2020
+Ryan,Reilly,Rachel & Joe,Becca & Jeramy,Jeannette & Terry
+Ben & Kami,Reilly,Jeannette & Terry,Rachel & Joe,Ron & Suzanne
+Sally,Reilly,Becca & Jeramy,Ron & Suzanne,Monique
+Julia,Marquez,Ryan,Jeannette & Terry,Sally
+Jason & Maurisa,Marquez,Monique,Melanie & Drew,Becca & Jeramy
+Ron & Suzanne,Marquez,Melanie & Drew,Ben & Kami,Rachel & Joe
+Rachel & Joe,Velarde,Sally,Julia,Ryan
+Melanie & Drew,Velarde,Ron & Suzanne,Monique,Jason & Maurisa
+Becca & Jeramy,Velarde,Jason & Maurisa,Sally,Ben & Kami
+Jeannette & Terry,Velarde,Ben & Kami,Ryan,Julia
+Monique,Ecker,Julia,Jason & Maurisa,Melanie & Drew
