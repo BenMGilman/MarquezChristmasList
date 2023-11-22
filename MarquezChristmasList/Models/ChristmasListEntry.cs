@@ -17,7 +17,11 @@ namespace MarquezChristmasList.Models
         public string GiftTo2019 { protected get; set; }
         [Name("2020")]
         public string GiftTo2020 { protected get; set; }
+        [Name("2021")]
+        public string GiftTo2021 { protected get; set; }
+        [Name("2022")]
+        public string GiftTo2022 { protected get; set; }
 
-        public IList<string> GiftTo => new List<string> { GiftTo2020, GiftTo2019, GiftTo2018 };
+        public IList<string> GiftTo => new List<string> { GiftTo2022, GiftTo2021, GiftTo2020, GiftTo2019, GiftTo2018  };
     }
 }
