@@ -25,11 +25,11 @@ namespace MarquezChristmasList
                     foreach (var person in people)
                     {
                         var givenTo = giftTo.FirstOrDefault(t => t.Item2 == person.Name);
-                        var givenToLast3Years = person.GiftTo.Where(g => !string.IsNullOrEmpty(g)).Take(3).ToHashSet();
+                        var givenToHistory = person.GiftTo.Where(g => !string.IsNullOrEmpty(g)).ToHashSet();
                         var possibleEntries = people
                             .Where(r => r != person && r.Family != person.Family) //cannot give to family
                             .Where(r => givenTo == null || givenTo.Item1 != r.Name) //cannot give to each other
-                            .Where(r => !givenToLast3Years.Contains(r.Name)) //cannot give to anyone who they've given to last 3 years
+                            .Where(r => !givenToHistory.Contains(r.Name)) //cannot give to anyone who they've given to
                             .ToList();
                         //weight entries based on if you have given to that person
                         var weightedEntries = new List<string>();
