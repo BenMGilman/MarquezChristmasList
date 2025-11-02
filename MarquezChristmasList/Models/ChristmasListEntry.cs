@@ -10,6 +10,8 @@ namespace MarquezChristmasList.Models
         public string Name { get; set; }
         [Name("Family")]
         public string Family { get; set; }
+        [Name("Parent")]
+        public string ParentFamily { get; set; }
 
         [Name("2018")]
         public string GiftTo2018 { protected get; set; }
@@ -23,7 +25,9 @@ namespace MarquezChristmasList.Models
         public string GiftTo2022 { protected get; set; }
         [Name("2023")]
         public string GiftTo2023 { protected get; set; }
+        [Name("2024")]
+        public string GiftTo2024 { protected get; set; }
 
-        public IList<string> GiftTo => new List<string> { GiftTo2023, GiftTo2022, GiftTo2021, GiftTo2020, GiftTo2019, GiftTo2018  };
+        public IList<string> GiftTo => new List<string> { GiftTo2024, GiftTo2023, GiftTo2022, GiftTo2021, GiftTo2020, GiftTo2019, GiftTo2018  };
     }
 }

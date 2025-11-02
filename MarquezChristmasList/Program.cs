@@ -16,7 +16,10 @@ namespace MarquezChristmasList
             using (var reader = new StreamReader("ChristmasList.csv"))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                var people = csv.GetRecords<ChristmasListEntry>().ToList();
+                var people = csv
+                    .GetRecords<ChristmasListEntry>()
+                    .Where(r => r.Name != "Briana") // 2025 - removed Briana
+                    .ToList();
                 List<Tuple<string, string>> giftTo;
                 do
                 {
@@ -25,11 +28,12 @@ namespace MarquezChristmasList
                     foreach (var person in people)
                     {
                         var givenTo = giftTo.FirstOrDefault(t => t.Item2 == person.Name);
-                        var givenToHistory = person.GiftTo.Where(g => !string.IsNullOrEmpty(g)).ToHashSet();
+                        var givenToHistory = person.GiftTo.Take(5).Where(g => !string.IsNullOrEmpty(g)).ToHashSet();
                         var possibleEntries = people
                             .Where(r => r != person && r.Family != person.Family) //cannot give to family
                             .Where(r => givenTo == null || givenTo.Item1 != r.Name) //cannot give to each other
-                            .Where(r => !givenToHistory.Contains(r.Name)) //cannot give to anyone who they've given to
+                            .Where(r => !givenToHistory.Contains(r.Name)) //cannot give to anyone who they've given to in last 5 years
+                            .Where(r => r.ParentFamily != person.Family && r.Family != person.ParentFamily) // remove children from parents and vice versa
                             .ToList();
                         //weight entries based on if you have given to that person
                         var weightedEntries = new List<string>();
