@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MarquezChristmasList": {
+      "commandName": "Project",
+      "workingDirectory": "."
+    }
+  }
+}
